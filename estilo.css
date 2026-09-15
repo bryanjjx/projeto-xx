@@ -1,0 +1,364 @@
+/* ==================================================
+   CONFIGURAÇÕES GERAIS
+   ================================================== */
+
+/*
+    O seletor * seleciona todos os elementos da página.
+
+    box-sizing: border-box facilita o controle dos
+    tamanhos dos elementos.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*
+    Estilos do elemento <body>.
+
+    body representa todo o conteúdo visual da página.
+*/
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+
+    color: #222;
+
+    line-height: 1.6;
+}
+
+
+/* ==================================================
+   CABEÇALHO
+   ================================================== */
+
+/*
+    <header> representa o cabeçalho da página.
+*/
+
+header {
+    background-color: #8b2e16;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+
+/*
+    Título principal do cabeçalho.
+*/
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+
+/*
+    Texto do cabeçalho.
+*/
+
+header p {
+    margin: 0;
+
+    font-size: 18px;
+}
+
+
+/* ==================================================
+   CONTEÚDO PRINCIPAL
+   ================================================== */
+
+/*
+    <main> contém o conteúdo principal da página.
+
+    max-width impede que o conteúdo fique muito largo
+    em telas grandes.
+*/
+
+main {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 30px 20px;
+}
+
+
+/*
+    Título "Destaques".
+*/
+
+.destaques h2 {
+    text-align: center;
+
+    color: #8b2e16;
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+}
+
+
+/*
+    Pequeno texto explicativo abaixo do título.
+*/
+
+.introducao {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+/* ==================================================
+   FLEXBOX
+   ================================================== */
+
+/*
+    .cards é o container dos três cards.
+
+    display: flex ativa o Flexbox.
+
+    flex-wrap: wrap permite que os cards passem
+    para outra linha quando não houver espaço.
+
+    gap cria um espaço entre os cards.
+
+    justify-content controla o alinhamento horizontal.
+*/
+
+.cards {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    justify-content: center;
+}
+
+
+/* ==================================================
+   CARDS
+   ================================================== */
+
+/*
+    Cada .card representa um destaque.
+
+    flex: 1 1 280px significa que:
+
+    1 = pode crescer
+    1 = pode diminuir
+    280px = tamanho inicial aproximado
+*/
+
+.card {
+    flex: 1 1 280px;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/*
+    Título de cada card.
+*/
+
+.card h3 {
+    color: #8b2e16;
+
+    margin-top: 15px;
+}
+
+
+/* ==================================================
+   CATEGORIAS MITO E VERDADE
+   ================================================== */
+
+/*
+    .categoria é usada para criar uma pequena etiqueta
+    no início de cada card.
+*/
+
+.categoria {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/*
+    Cor utilizada para a etiqueta MITO.
+*/
+
+.mito {
+    background-color: #ffd6d6;
+
+    color: #a40000;
+}
+
+
+/*
+    Cor utilizada para a etiqueta VERDADE.
+*/
+
+.verdade {
+    background-color: #d7f5df;
+
+    color: #146b2e;
+}
+
+
+/* ==================================================
+   BOTÃO
+   ================================================== */
+
+/*
+    Estilo do botão.
+
+    <button> é o elemento utilizado para permitir
+    uma ação do usuário.
+*/
+
+.botao {
+    background-color: #f29f05;
+
+    color: #222;
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding: 10px 16px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+/*
+    :hover é ativado quando o mouse passa
+    sobre o botão.
+*/
+
+.botao:hover {
+    background-color: #d98200;
+
+    color: white;
+}
+
+
+/*
+    :focus ajuda quem utiliza teclado a perceber
+    qual botão está selecionado.
+*/
+
+.botao:focus {
+    outline: 3px solid #333;
+
+    outline-offset: 3px;
+}
+
+
+/* ==================================================
+   RESPOSTA
+   ================================================== */
+
+/*
+    A resposta começa escondida.
+
+    O JavaScript irá adicionar a classe "mostrar"
+    quando o estudante clicar no botão.
+*/
+
+.resposta {
+    display: none;
+
+    background-color: #fff7e6;
+
+    border-left: 5px solid #f29f05;
+
+    padding: 15px;
+
+    margin-top: 20px;
+
+    border-radius: 5px;
+}
+
+
+/*
+    Quando o elemento possuir as classes:
+
+    resposta + mostrar
+
+    ele será exibido.
+*/
+
+.resposta.mostrar {
+    display: block;
+}
+
+
+/* ==================================================
+   RODAPÉ
+   ================================================== */
+
+footer {
+    background-color: #3a1f17;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 20px;
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE
+   ================================================== */
+
+/*
+    Esta regra é aplicada em telas de até 600px.
+
+    O Flexbox passa a organizar os cards
+    verticalmente.
+*/
+
+@media (max-width: 600px) {
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+}

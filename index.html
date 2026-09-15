@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!--
+        <head> contém informações da página que não aparecem
+        diretamente no conteúdo principal.
+    -->
+
+    <!-- Permite utilizar caracteres como ç, ã, é etc. -->
+    <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar a celulares e tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Texto que aparece na aba do navegador -->
+    <title>Verificação de Fatos - Hamburgueria</title>
+
+    <!-- Conecta o arquivo HTML ao arquivo CSS -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+
+<body>
+
+    <!--
+        <header> representa o cabeçalho da página.
+        Aqui colocamos o título e uma pequena apresentação.
+    -->
+    <header>
+
+        <h1>Verificação de Fatos</h1>
+
+        <p>
+            Mitos e verdades sobre cardápios, preços e promoções
+            de hamburgueria.
+        </p>
+
+    </header>
+
+
+    <!--
+        <main> representa o conteúdo principal da página.
+    -->
+    <main>
+
+        <!--
+            <section> cria uma seção de conteúdo.
+            Neste caso, será nossa seção "Destaques".
+        -->
+        <section class="destaques">
+
+            <!-- Título da seção -->
+            <h2>Destaques</h2>
+
+            <p class="introducao">
+                Leia cada afirmação e clique no botão para descobrir
+                se ela é um mito ou uma verdade.
+            </p>
+
+
+            <!--
+                <div> é usado para agrupar elementos.
+                Aqui ele será o container dos três cards.
+            -->
+            <div class="cards">
+
+
+                <!-- ============================== -->
+                <!-- CARD 1 -->
+                <!-- ============================== -->
+
+                <!--
+                    <article> representa um conteúdo independente.
+                    Cada article será um card.
+                -->
+                <article class="card">
+
+                    <span class="categoria mito">
+                        MITO
+                    </span>
+
+                    <h3>O hambúrguer mais caro sempre é o maior.</h3>
+
+                    <p>
+                        Podemos descobrir o tamanho de um hambúrguer
+                        apenas olhando o preço?
+                    </p>
+
+                    <!--
+                        <button> cria um botão que pode ser clicado.
+                        O JavaScript irá controlar esse botão.
+                    -->
+                    <button class="botao">
+                        Ver resposta
+                    </button>
+
+                    <!--
+                        Esta resposta começa escondida.
+                        O JavaScript irá mostrar o conteúdo quando
+                        o estudante clicar no botão.
+                    -->
+                    <p class="resposta">
+
+                        <strong>Mito!</strong>
+
+                        O preço não determina necessariamente o tamanho
+                        do hambúrguer. É importante consultar as
+                        informações do cardápio, como peso, ingredientes
+                        ou quantidade de carne.
+
+                    </p>
+
+                </article>
+
+
+                <!-- ============================== -->
+                <!-- CARD 2 -->
+                <!-- ============================== -->
+
+                <article class="card">
+
+                    <span class="categoria verdade">
+                        VERDADE
+                    </span>
+
+                    <h3>
+                        Uma promoção pode ter condições específicas.
+                    </h3>
+
+                    <p>
+                        É importante ler as regras de uma promoção
+                        antes de considerar o preço anunciado.
+                    </p>
+
+                    <button class="botao">
+                        Ver resposta
+                    </button>
+
+                    <p class="resposta">
+
+                        <strong>Verdade!</strong>
+
+                        Uma promoção pode ter condições, como período
+                        de validade, produtos participantes, quantidade
+                        limitada ou necessidade de utilizar um cupom.
+
+                    </p>
+
+                </article>
+
+
+                <!-- ============================== -->
+                <!-- CARD 3 -->
+                <!-- ============================== -->
+
+                <article class="card">
+
+                    <span class="categoria mito">
+                        MITO
+                    </span>
+
+                    <h3>
+                        "50% OFF" significa que qualquer produto
+                        custa metade do preço.
+                    </h3>
+
+                    <p>
+                        Devemos conferir quais produtos realmente
+                        participam da promoção.
+                    </p>
+
+                    <button class="botao">
+                        Ver resposta
+                    </button>
+
+                    <p class="resposta">
+
+                        <strong>Mito!</strong>
+
+                        Uma promoção pode valer apenas para determinados
+                        produtos ou depender de condições específicas.
+                        Por isso, devemos verificar as regras da oferta
+                        antes de concluir que todos os produtos possuem
+                        50% de desconto.
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!--
+        <footer> representa o rodapé da página.
+    -->
+    <footer>
+
+        <p>
+            Projeto educativo de Desenvolvimento Web —
+            Verificação de fatos
+        </p>
+
+    </footer>
+
+
+    <!--
+        <script> conecta o HTML ao JavaScript.
+
+        Ele foi colocado no final do body para que os elementos
+        HTML sejam carregados antes do JavaScript tentar encontrá-los.
+    -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
